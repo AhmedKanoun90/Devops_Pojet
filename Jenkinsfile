@@ -1,6 +1,6 @@
 pipeline { 
     environment{
-       registry="esprituser/tpachatprojctbackend"
+       registry="ahmedka007/tpachatprojctbackend"
        registryCredential='ahmedka007-dockerhub'
        dokerImage="tpachatprojctbackend" 
        PATH = "$PATH:/usr/local/bin"
@@ -51,7 +51,7 @@ pipeline {
          }  
           stage("DockerHub login ") {
               steps{
-                  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u esprituser -p P@ssw0rd@imc'
+                  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u ahmedka007 -p Leader@2021'
             }
           }
          stage("docker push") {
