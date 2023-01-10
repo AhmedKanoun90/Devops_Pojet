@@ -1,7 +1,7 @@
 pipeline { 
     environment{
        registry="esprituser/tpachatprojctbackend"
-       registryCredential='esprituser-dockerhub'
+       registryCredential='ahmedka007-dockerhub'
        dokerImage="tpachatprojctbackend" 
        PATH = "$PATH:/usr/local/bin"
  } 
