@@ -11,7 +11,7 @@ pipeline {
        stage("Cloning Project"){
            steps {
             git branch: 'many',
-            url: 'https://github.com/AhmedKanoun90/DevopsProject.git'
+            url: 'https://github.com/AhmedKanoun90/Devops_Pojet.git'
             echo 'checkout stage'
             }
        } 
