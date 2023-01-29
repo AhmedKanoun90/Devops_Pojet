@@ -72,42 +72,10 @@ pipeline {
               
              }  
         }
-         //   stage('Cleaning up') {
-        //     steps{
-        //     sh "docker rmi $registry:$BUILD_NUMBER"
-        //   }
-       // }
-       stage("SonarQube Analysis") {
-         steps {
-             withSonarQubeEnv('sq1') {
-              sh 'mvn sonar:sonar'
-             }
-                 
-          }
-       } 
+      
         
   
-     stage("Upload Jar  To Nexus") {
-            steps {  
-               nexusArtifactUploader artifacts: [ 
-                 [ 
-                    artifactId: 'tpAchatProject',  
-                      classifier: '',  
-                      file: 'target/tpAchatProject-1.0.jar',   
-                      type: 'jar' 
-                   ]  
-
-            ],  
-            credentialsId: 'nexus3', 
-            groupId: 'com.esprit.examen', 
-            nexusUrl: '172.20.10.5:8081', 
-            nexusVersion: 'nexus3', 
-            protocol: 'http', 
-            repository: 'deploymentRepo',  
-            version: '1.0' 
-
-
-        }  
+     
 
      } 
 
