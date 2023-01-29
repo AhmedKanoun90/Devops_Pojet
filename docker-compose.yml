@@ -20,7 +20,7 @@ services:
 
   angular:
     image: esprituser/angularproject:dev
-    container_name: angular
+    container_name: newangular
     ports:
       - 4200:4200 
     depends_on:
