@@ -49,11 +49,7 @@ pipeline {
               }
            }
          }  
-          stage("DockerHub login ") {
-              steps{
-                  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u ahmedka007 -p Leader@2021'
-            }
-          }
+         
          stage("docker push") {
             steps{
               script {
@@ -63,6 +59,11 @@ pipeline {
            }
        }
       }   
+         stage("DockerHub login ") {
+              steps{
+                  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u ahmedka007 -p Leader@2021'
+            }
+          }
             
          stage('Docker-compose file') {
 
