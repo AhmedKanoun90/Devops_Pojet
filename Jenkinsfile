@@ -10,7 +10,7 @@ pipeline {
     stages {  
        stage("Cloning Project"){
            steps {
-            git branch: 'main',
+            git branch: 'any',
             url: 'https://github.com/AhmedKanoun90/DevopsProject.git'
             echo 'checkout stage'
             }
